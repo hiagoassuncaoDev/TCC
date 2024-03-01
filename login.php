@@ -28,6 +28,15 @@
         "<script>
             location.href='paginainicial.php';
         </script>";
+    }else{
+        echo
+        "<script>
+            alert('Usuário e/ou senha incorreto(s)')
+        </script>";
+        echo
+        "<script>
+            location.href='index.php'
+        </script>";
     }
 
 ?>
