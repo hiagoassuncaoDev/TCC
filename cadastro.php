@@ -22,7 +22,7 @@
                                 <label for="beneficios" class="mb-2">Benefícios: </label>
                                 <input type="text" name="beneficios" class="form-control" required placeholder="Ex: VA, VT, Plano de saúde...">
                             </div>
-                            <button type="submit" class="btn btn-primary mt-3 mb-5">Cadastrar</button>
+                            <button type="submit" class="btn btn-success mt-3 mb-5">Cadastrar</button>
                         </form>
                 </div>
             </div>

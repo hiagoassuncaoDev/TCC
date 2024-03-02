@@ -12,15 +12,21 @@
        while($funcionario = $resultado->fetch_assoc()){
         echo 
         "<div class='container'>
-            <div class='card mt-4'>
-                <div class='card-body'>
-                    <h2>Nome: {$funcionario['nome']}</h2>
-                    <h3>RE: {$funcionario['id']}</h3>
-                    <h4>Cargo: {$funcionario['cargo']}</h4>
-                    <p><strong>Data de admissão:</strong> {$funcionario['admissao']}</p>
-                    <p><strong>Benefícios:</strong> {$funcionario['beneficios']}</p>
-                    <button class=\"btn btn-success\" onclick=\"location.href='?page=edicao&id={$funcionario['id']}'\">Editar</button>
-                    <button class='btn btn-danger' onclick=\"location.href='?page=exclusao&id={$funcionario['id']}'\">Excluir</button>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col mb-3'>
+                        <div class='card mt-4'>
+                            <div class='card-body'>
+                                <h2>Nome: {$funcionario['nome']}</h2>
+                                <h3>RE: {$funcionario['id']}</h3>
+                                <h4>Cargo: {$funcionario['cargo']}</h4>
+                                <p><strong>Data de admissão:</strong> {$funcionario['admissao']}</p>
+                                <p><strong>Benefícios:</strong> {$funcionario['beneficios']}</p>
+                                <button class=\"btn btn-success\" onclick=\"location.href='?page=edicao&id={$funcionario['id']}'\">Editar</button>
+                                <button class='btn btn-danger' onclick=\"location.href='?page=exclusao&id={$funcionario['id']}'\">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>";

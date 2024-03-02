@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/login-style.css">
-    <title>Login</title>
+    <title>Staff Track - Login</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" />
 </head>
 <body>
     <div class="main-login">
