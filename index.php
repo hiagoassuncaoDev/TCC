@@ -3,43 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login-style.css">
     <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: #f2f2f2;
-        }
-
-        .login {
-            width: 100%;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
-    </style>
 </head>
 <body>
-    <div class="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="login.php" method="post">
-                                <label for="usuario">Usuário: </label>
-                                <input type="text" name="usuario"> <br> <br>
-                                <label for="senha">Senha: </label>
-                                <input type="password" name="senha"> <br> <br>
-                                <button type="submit" class="btn btn-primary">Fazer login</button>
-                            </form>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Bem vindo(a)<br>ao <span>StaffTrack</span>!</h1>
+            <img src="./assets/logo.png" class="left-login-image" alt="logo-staff-track">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Acesso</h1>
+                <form action="login.php" method="post" class="textfield">
+                    
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário"><br>
+                    
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha"><br>
+                    
+                        <div class="buttonfield">
+                            <button class="btn-login">Login</button>
                         </div>
-                    </div>
-                </div>
+                </form>
+                
             </div>
         </div>
-
     </div>
+    
 </body>
 </html>
