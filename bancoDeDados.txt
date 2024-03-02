@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 02, 2024 at 11:07 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `tcc`
+--
+CREATE DATABASE IF NOT EXISTS `tcc` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `tcc`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `equipe`
+--
+
+DROP TABLE IF EXISTS `equipe`;
+CREATE TABLE `equipe` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `cargo` varchar(100) DEFAULT NULL,
+  `admissao` date DEFAULT NULL,
+  `beneficios` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `equipe`
+--
+
+INSERT INTO `equipe` (`id`, `nome`, `cargo`, `admissao`, `beneficios`) VALUES
+(5, 'Hiago Assunção do Amor', 'Programador Web', '2020-02-01', 'VA, VT, Plano odontológico e Bônus.'),
+(6, 'Argel Assunção do Amor', 'Analista de Sistemas', '2021-06-24', 'VA, VT, Plano odontológico e Bônus de comissão'),
+(7, 'Lavínia França', 'Psicóloga', '2021-04-26', 'VA, VT, Plano odontológico e Bônus.'),
+(8, 'Sarah Carvalho', 'Gerente de marketing', '2022-05-27', 'VA, VT, Plano odontológico e Bônus.'),
+(9, 'Sophie Silveira do Amor', 'Gerente de Planejamento', '2023-09-25', 'VA, VT, Plano odontológico e Bônus.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(100) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
+  `cargo` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `usuario`, `senha`, `cargo`) VALUES
+(1, 'admin', 'adm321', 1),
+(2, 'visitante', 'visita321', 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `equipe`
+--
+ALTER TABLE `equipe`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `equipe`
+--
+ALTER TABLE `equipe`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
